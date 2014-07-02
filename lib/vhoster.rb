@@ -1,5 +1,5 @@
 require "vhoster/version"
 
 module Vhoster
-  # Your code goes here...
+  # No code here.
 end
