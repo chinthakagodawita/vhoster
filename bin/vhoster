@@ -1,14 +1,12 @@
 #!/usr/bin/env ruby
+# encoding: UTF-8
 
-root = File.expand_path(File.join(File.dirname(__FILE__),'..'))
-if File.directory?(File.join(root,'.git'))
-  Dir.chdir(root) do
-    begin
-      require 'bundler/setup'
-    rescue LoadError => e
-      warn e.message
-      warn "Run `gem install bundler` to install Bundler"
-      exit -1
-    end
-  end
-end
+# Resolve binary path.
+require "pathname"
+bin_file = Pathname.new(__FILE__).realpath
+
+# Add self to libpath.
+$:.unshift File.expand_path("../../lib", bin_file)
+
+require 'vhoster/cli'
+Vhoster::CLI.run(*ARGV)
