@@ -1,6 +1,6 @@
 # Vhoster
 
-Command-line utility to help setup and manage virtualhosts for Apache on OS X. In the interest of full disclosure, this draws a fair bit of inspiration from [VirtualHostX](https://clickontyler.com/virtualhostx/) :).
+Command-line utility to help setup and manage virtualhosts for Apache on OS X. In the interest of full disclosure, this draws a fair bit of inspiration from [VirtualHostX](https://clickontyler.com/virtualhostx/) :). Also draws a fair bit of its structure and organisation from the [Heroku gem](https://github.com/heroku/heroku).
 
 ## Requirements
 This has only been tested on ruby 2.x, use on 1.9.x at your own peril. It's also only been tested on OS X 10.9 (Mavericks), it may/not work on older versions and other UNIX OSes.
