@@ -12,12 +12,13 @@ module Vhoster
       end
     end
 
-    def self.commands
-      @@commands = @@commands || {}
-    end
+    # def self.commands
+    #   @@commands = @@commands || {}
+    # end
 
     def self.register_command(command)
-      @@commands[command[:name]] = command
+      commands = {}
+      commands[command[:name]] = command
     end
 
     # Parses the command and arguments into a runnable command object and
@@ -46,6 +47,7 @@ module Vhoster
     end
 
     def self.run(command, args = [])
+      self.load()
       begin
         runner, method = parse_input(command, args)
         # runner.exec(method)

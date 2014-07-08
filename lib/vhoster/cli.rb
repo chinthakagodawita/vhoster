@@ -13,7 +13,6 @@ class Vhoster::CLI
 
       command = args.shift.strip rescue 'help'
 
-      Vhoster::Command.load
       Vhoster::Command.run(command, args)
     rescue Interrupt
       `stty icanon echo`
