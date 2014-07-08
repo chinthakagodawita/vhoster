@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in vhoster.gemspec
+# Unforunately the gemspec does not let us specify a git-based dependency.
+gem 'apacheconf-parser', :github => 'vleis/apacheconf-parser', :ref => '37373ca'
+
+# Other gem dependencies.
 gemspec
