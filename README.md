@@ -25,7 +25,13 @@ To setup Apache to use virtualhosts (if you haven't already), run:
 
     vhoster init
 
+To add virtualhosts, run:
 
+    vhoster add my-virtualhost.dev
+
+To remove a virtualhost:
+
+    vhoster remove my-virtualhost.dev
 
 ## Contributing
 
