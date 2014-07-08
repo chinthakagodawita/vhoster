@@ -19,6 +19,7 @@ class Vhoster::CLI
       `stty icanon echo`
       error("Command cancelled.")
     rescue => error
+      puts error
       exit 1
     end
   end
